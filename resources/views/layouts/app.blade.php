@@ -50,6 +50,7 @@
                         <li><a href="{{ url('admin/schedule') }}"><i class="fa fa-calendar"></i> Schedule</a></li>
                         <li><a href="{{ url('admin/invites') }}"><i class="fa fa-plane"></i> Invites</a></li>
                         <li><a href="{{ url('admin/social') }}"><i class="fa fa-share-alt-square"></i> Social Media</a></li>
+                        <li><a href="{{ url('admin/contact') }}"><i class="fa fa-envelope"></i> Contact</a></li>
                         @endif
                     </ul>
 
@@ -88,6 +89,13 @@
 @section('scripts')
     <script src="/js/app.js"></script>
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/js/jquery.maskedinput.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".phone").mask("(999) 999-9999");
+        });
+    </script>
 @show
 </body>
 </html>

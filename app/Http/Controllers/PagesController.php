@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\Invite;
+use App\User;
 use Spatie\Tags\Tag;
 
 /**
@@ -28,13 +29,10 @@ class PagesController extends Controller
         return view('theme.blog', compact('posts', 'tags'));
     }
 
-    /**
-     * @param $slug
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function blogDetails($slug)
     {
         $post = Blog::whereSlug($slug)->firstOrFail();
+
         $tags = Tag::all();
 
         return view('theme.blog_details', compact('post', 'tags'));
@@ -62,5 +60,18 @@ class PagesController extends Controller
         ]);
 
         return redirect()->route('invite')->with('message', 'Thank you for the invitation, we will contact you soon.');
+    }
+
+    public function contact()
+    {
+        $user = User::first();
+
+        return view('theme.contact', compact('user'));
+    }
+
+    public function sendEmail()
+    {
+        return request()->all();
+        // @todo send email
     }
 }
