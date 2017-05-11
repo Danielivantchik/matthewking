@@ -58,7 +58,7 @@ class PagesController extends Controller
             'email' => request()->email,
             'description' => request()->description
         ]);
-
+        // @todo send email.
         return redirect()->route('invite')->with('message', 'Thank you for the invitation, we will contact you soon.');
     }
 

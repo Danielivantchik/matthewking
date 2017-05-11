@@ -31,8 +31,8 @@
                                 <u>Donate</u>
                             </a>
                             <ul>
-                                <li><a href="https://www.paypal.me/mattking38" target="_blank">Paypall</a></li>
-                                <li><a href="https://www.patreon.com/mattking" target="_blank">Patreon</a></li>
+                                <li><a href="https://www.paypal.me/mattking38" target="_blank">One-time gift</a></li>
+                                <li><a href="https://www.patreon.com/mattking" target="_blank">Reoccuring gift</a></li>
                             </ul>
                         </li>
                     </ul>
