@@ -18,8 +18,8 @@ class CreateInvitesTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->string('title');
             $table->text('description');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

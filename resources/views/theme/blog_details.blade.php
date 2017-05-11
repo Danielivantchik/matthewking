@@ -29,50 +29,48 @@
                             <div>
                                 <div class="info">
                                     <div class="date-box">
-                                        <span class="day">28</span>
-                                        <span class="month">SEP</span>
+                                        <span class="day">{{ $post->updated_at->format("d") }}</span>
+                                        <span class="month">{{ $post->updated_at->format("M") }}</span>
                                     </div>
                                 </div>
                                 <div class="preview">
-                                    <img src="/theme/img/blog/pic-blog-1.jpg" alt="">
+                                    @if($post->photo != null)
+                                        <img src="{{ asset($post->photo) }}" alt="">
+                                    @else
+                                        <img src="/img/blog-img-not-available.jpg" alt="">
+                                    @endif
+
                                     <a href="#">
-                                        <h3 class="blog-title">Lorem ipsum dolor sit amet</h3>
+                                        <h3 class="blog-title">{{ $post->title }}</h3>
                                     </a>
-                                    <p>
-                                        <a href="#"></a>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur </p>
+                                    {!! $post->body !!}
                                 </div>
-                                <div class="meta-info">By: <a href="#">Admin</a><span>|</span><a href="#">Event</a>, <a href="#">Promotion</a></div>
+                                <div class="meta-info">By:
+                                    <a href="#">Matthew King</a>
+                                    <span>|</span>
+                                    @foreach($post->tags as $tag)
+                                        <a href="/blog?tag={{ $tag->slug }}">{{ $tag->name }}</a>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
 
                         {{-- Add disqus comments --}}
 
                     </div>
-
                     <div id="sidebar" class="col-md-4">
+                        <!-- widget tags -->
                         <div class="widget widget_tags">
                             <h3><span>Tags</span></h3>
                             <ul>
-                                <li><a href="#link">course</a></li>
-                                <li><a href="#link">responsive</a></li>
-                                <li><a href="#link">css3</a></li>
-                                <li><a href="#link">html5</a></li>
-                                <li><a href="#link">website</a></li>
-                                <li><a href="#link">template</a></li>
-                                <li><a href="#link">elegant</a></li>
-                                <li><a href="#link">clean</a></li>
-                                <li><a href="#link">jquery</a></li>
-                                <li><a href="#link">php</a></li>
-                                <li><a href="#link">html</a></li>
-                                <li><a href="#link">css</a></li>
+                                @foreach($tags as $tag)
+                                    <li><a href="/blog?tag={{ $tag->slug }}">{{$tag->name}}</a></li>
+                                @endforeach
                             </ul>
                         </div>
 
-
                     </div>
+
                 </div>
 
             </div>

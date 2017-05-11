@@ -21,6 +21,7 @@ class CreateSchedulesTable extends Migration
             $table->string('organizer_website');
             $table->text('address');
             $table->boolean('visible')->default(1);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

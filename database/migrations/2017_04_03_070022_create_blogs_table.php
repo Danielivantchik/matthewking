@@ -21,7 +21,7 @@ class CreateBlogsTable extends Migration
             $table->text('description')->nullable();
             $table->text('body')->nullable();
             $table->boolean('visible')->default(1);
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }

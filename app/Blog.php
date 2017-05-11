@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Tags\HasTags;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Blog extends Model
 {
-    use HasTags;
+    use HasTags, SoftDeletes;
 
     /**
      * The table associated with the model.

@@ -28,9 +28,18 @@
                                 @endif
                             </div>
 
+                            {{--<div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">--}}
+                                {{--<input type="text" id="tagsinput" value="" class="form-control" data-role="tagsinput">--}}
+                                {{--@if ($errors->has('tags'))--}}
+                                    {{--<span class="help-block">--}}
+                                    {{--<strong>{{ $errors->first('tags') }}</strong>--}}
+                                {{--</span>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+
+
                             <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-                                <textarea name="description" class="form-control" placeholder="Description"
-                                          rows=2>{{ old('description') }}</textarea>
+                                <textarea name="description" class="form-control" placeholder="Description" rows=2>{{ old('description') }}</textarea>
                                 @if ($errors->has('description'))
                                     <span class="help-block">
                                     <strong>{{ $errors->first('description') }}</strong>
@@ -78,7 +87,14 @@
 
 @section('scripts')
     @parent
+    {{--<script src="{{ asset('js/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>--}}
+    {{--<script>--}}
+        {{--$(document).ready(function () {--}}
+            {{--$("#tagsinput").tagsinput({})--}}
+        {{--});--}}
+    {{--</script>--}}
     <script>
         CKEDITOR.replace('editor');
     </script>
+
 @endsection

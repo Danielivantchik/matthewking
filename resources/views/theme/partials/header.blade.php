@@ -23,9 +23,18 @@
                     <ul id="mainmenu">
                         <li><a href="/">Home</a></li>
                         <li><a href="#">Schedule</a></li>
-                        <li><a href="#">Invite</a></li>
+                        <li><a href="/invite">Invite</a></li>
                         <li><a href="/blog">Blog</a></li>
                         <li><a href="#">Contact</a></li>
+                        <li>
+                            <a href="#" style="color: rgb(255, 214, 88)">
+                                <u>Donate</u>
+                            </a>
+                            <ul>
+                                <li><a href="https://www.paypal.me/mattking38" target="_blank">Paypall</a></li>
+                                <li><a href="https://www.patreon.com/mattking" target="_blank">Patreon</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <!-- mainmenu close -->

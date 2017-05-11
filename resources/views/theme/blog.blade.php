@@ -42,7 +42,7 @@
                                     @if($post->photo != null)
                                         <img src="/storage/{{ $post->photo }}" alt=""/>
                                     @else
-                                        <img src="{{ asset('theme/img/blog/pic-blog-1.jpg') }}" alt=""/>
+                                        <img src="{{ asset('img/blog-img-not-available.jpg') }}" alt=""/>
                                     @endif
                                     <a href="/blog/{{ $post->slug }}">
                                         <h3 class="blog-title">{{ $post->title }}</h3>

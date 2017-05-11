@@ -18,6 +18,7 @@ class CreateContentsTable extends Migration
             $table->string('name');
             $table->json('data');
             $table->boolean('visible')->default(1);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
