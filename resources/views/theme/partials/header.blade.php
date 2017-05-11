@@ -41,14 +41,14 @@
 
                 <!-- social icons -->
                 <div class="social">
-                    @if(auth()->user()->facebook)
-                    <a href="{{ auth()->user()->facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
+                    @if(\App\User::first()->facebook)
+                    <a href="{{ \App\User::first()->facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
                     @endif
-                    @if(auth()->user()->instagram)
-                    <a href="{{ auth()->user()->instagram }}" target="_blank"><i class="fa fa-instagram"></i></a>
+                    @if(\App\User::first()->instagram)
+                    <a href="{{ \App\User::first()->instagram }}" target="_blank"><i class="fa fa-instagram"></i></a>
                     @endif
-                    @if(auth()->user()->twitter)
-                        <a href="{{ auth()->user()->twitter }}"><i class="fa fa-twitter"></i></a>
+                    @if(\App\User::first()->twitter)
+                        <a href="{{ \App\User::first()->twitter }}"><i class="fa fa-twitter"></i></a>
                     @endif
                     <a href="mailto:matthew.king@ibethel.org"><i class="fa fa-envelope-o"></i></a>
                 </div>
