@@ -5,7 +5,7 @@
             <ul>
                 <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                     <!--  BACKGROUND IMAGE -->
-                    <img src="/images/home2.jpg" alt="">
+                    <img src="/images/home2.JPG" alt="">
                     <div class="tp-caption border-v lft"
                         data-x="540"
                         data-y="center"
@@ -56,7 +56,7 @@
 
                 <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                     <!--  BACKGROUND IMAGE -->
-                    <img src="/images/home1.jpg" alt="">
+                    <img src="/images/home1.JPG" alt="">
                     <div class="tp-caption custom-font-1 lft"
                         data-x="left"
                         data-y="140"
