@@ -48,7 +48,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                                <textarea name="address" class="form-control" placeholder="Address" rows=2>{{ $schedule->address }}</textarea>
+                                <textarea name="address" class="form-control" placeholder="Address and other info" rows=2>{{ $schedule->address }}</textarea>
                                 @if ($errors->has('address'))
                                     <span class="help-block">
                                     <strong>{{ $errors->first('address') }}</strong>

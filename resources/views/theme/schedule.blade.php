@@ -22,26 +22,20 @@
 
             <div class="container">
                 <div class="row">
-
+                @foreach($schedules as $schedule)
                     <div class="col-md-6 event-item">
-                        <div class="inner">
-                            <div class="left-col">
-                                <img src="img/events/pic (2).jpg" alt="">
-                            </div>
-                            <div class="right-col">
-                                <span class="date">10</span>
-                                <span class="month">FEB</span>
-                                <span class="time">10:00 am</span>
-                            </div>
-                        </div>
                         <div class="desc">
-                            <a href="#">
-                                <h3>Transforming Live</h3>
+                            <a href="{{ $schedule->organizer_website }}" target="_blank">
+                                <h2>{{ $schedule->title }}</h2>
                             </a>
-                            <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                            <h4>{{  $schedule->date }}</h4>
+                            <h4>{{  $schedule->organizer }}</h4>
+                            <span class="text">
+                                <p>{!! $schedule->address !!}</p>
                             </span>
                         </div>
                     </div>
+                @endforeach
                 </div>
             </div>
 
