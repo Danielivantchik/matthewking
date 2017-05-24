@@ -12,6 +12,7 @@ Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function() {
     Route::resource('pages', 'Admin\PagesController');
     Route::resource('blog', 'Admin\BlogController');
     Route::post('/delete-photo/{id}', 'Admin\BlogController@deletePhoto')->name('blog_delete_photo');
+
     Route::resource('schedule', 'Admin\ScheduleController');
 
     Route::get('social', 'Admin\SocialMediaController@index');
@@ -35,3 +36,5 @@ Route::post('/invite', 'PagesController@storeInvite');
 
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::post('/contact', 'PagesController@sendEmail')->name('sendEmail');
+
+Route::get('/schedule', 'PagesController@schedule')->name('schedule');

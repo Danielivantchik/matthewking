@@ -1,4 +1,4 @@
-<section id="section-text-2">
+<section id="section-text-2" style="padding-bottom: 0px">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-md-6">
-                <img src="{{ asset('images/mattandelisabeth.jpg') }}" class="img-responsive" alt="Matthew and Elisabeth King">
+                <img src="{{ asset('images/aboutus.png') }}" class="img-responsive" alt="Matthew and Elisabeth King">
             </div>
         </div>
     </div>

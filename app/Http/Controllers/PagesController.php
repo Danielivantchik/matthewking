@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
-use App\Invite;
 use App\User;
+use App\Invite;
+use App\Schedule;
 use Spatie\Tags\Tag;
 
 /**
@@ -73,5 +74,12 @@ class PagesController extends Controller
     {
         return request()->all();
         // @todo send email
+    }
+
+    public function schedule()
+    {
+        $schedules = Schedule::where('visible', 1)->get();
+
+        return view('theme.schedule', compact('schedules'));
     }
 }

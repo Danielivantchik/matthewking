@@ -48,6 +48,7 @@
                         </tbody>
                     </table>
                 </div>
+                {{ $blogs->links() }}
             </div>
         </div>
     </div>

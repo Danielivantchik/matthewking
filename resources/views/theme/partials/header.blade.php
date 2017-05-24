@@ -22,7 +22,7 @@
                 <div id="mainmenu-container">
                     <ul id="mainmenu">
                         <li><a href="/">Home</a></li>
-                        <li><a href="#">Schedule</a></li>
+                        <li><a href="/schedule">Schedule</a></li>
                         <li><a href="/invite">Invite</a></li>
                         <li><a href="/blog">Blog</a></li>
                         <li><a href="/contact">Contact</a></li>
