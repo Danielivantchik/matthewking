@@ -16,7 +16,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $schedules = Schedule::latest()->take(8)->get();
+        $schedules = Schedule::oldest()->take(8)->get();
 
         $posts = Blog::latest()->take(5)->get();
 
