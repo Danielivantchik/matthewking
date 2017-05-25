@@ -16,7 +16,11 @@ class PagesController extends Controller
 {
     public function index()
     {
-        return view('theme.index');
+        $schedules = Schedule::latest()->take(8)->get();
+
+        $posts = Blog::latest()->take(5)->get();
+
+        return view('theme.index', compact('schedules', 'posts'));
     }
 
     public function blog()

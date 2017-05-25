@@ -58,6 +58,28 @@
                             <br>
                             <div class="row">
                                 <div class="col-md-6">
+                                    <div class="form-group{{ $errors->has('photo') ? ' has-error' : '' }}">
+                                        @if($schedule->photo == null)
+                                            <input type="file" id="photo" name="photo">
+                                            @if ($errors->has('photo'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('photo') }}</strong>
+                                                </span>
+                                            @else
+                                                <p class="help-block">Upload a photo. (Make sure it's 640x480 px)</p>
+                                            @endif
+
+                                        @else
+                                            <img src="{{ asset($schedule->photo) }}" alt="" width="100px">
+
+                                            <a href="{{ route('schedule_delete_photo', $schedule->id) }}"
+                                                onclick="event.preventDefault();
+                                                document.getElementById('deletephoto').submit();">
+                                                Delete Photo <i class="fa fa-trash"></i>
+                                            </a>
+                                        @endif
+
+                                    </div>
                                 </div>
 
                                 <div class="col-md-6">
@@ -77,4 +99,7 @@
             </div>
         </div>
     </div>
+    <form id="deletephoto" action="{{ route('schedule_delete_photo', $schedule->id) }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+    </form>
 @endsection

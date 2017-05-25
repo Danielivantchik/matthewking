@@ -24,7 +24,7 @@ class BlogController extends Controller
     {
         $this->validate(request(), [
             'title' => 'required',
-            'description' => 'required',
+            'description' => '',
             'body' => '',
             'photo' => 'mimes:jpeg,jpg,png',
             'tags' => 'required'
@@ -77,7 +77,7 @@ class BlogController extends Controller
     {
         $this->validate(request(), [
             'title' => 'required',
-            'description' => 'required',
+            'description' => '',
             'body' => '',
             'photo' => 'mimes:jpeg,jpg,png',
             'tags' => 'required'

@@ -17,9 +17,9 @@ class CreateSchedulesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('date');
-            $table->string('organizer');
-            $table->string('organizer_website');
-            $table->text('address');
+            $table->string('organizer')->nullable();
+            $table->string('organizer_website')->nullable();
+            $table->text('address')->nullable();
             $table->boolean('visible')->default(1);
             $table->softDeletes();
             $table->timestamps();

@@ -9,8 +9,8 @@
 
                 <div class="panel-body">
                     <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add Page</a>
-                    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add Blog Post</a>
-                    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add Event</a>
+                    <a href="/admin/blog/create" class="btn btn-primary"><i class="fa fa-plus"></i> Add Blog Post</a>
+                    <a href="/admin/schedule/create" class="btn btn-primary"><i class="fa fa-plus"></i> Add Event</a>
                 </div>
             </div>
         </div>

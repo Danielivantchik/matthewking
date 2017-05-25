@@ -36,8 +36,6 @@
                                 <div class="preview">
                                     @if($post->photo != null)
                                         <img src="{{ asset($post->photo) }}" alt="">
-                                    @else
-                                        <img src="/img/blog-img-not-available.jpg" alt="">
                                     @endif
 
                                     <a href="#">

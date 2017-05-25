@@ -16,6 +16,19 @@ class ScheduleController extends Controller
         return view('admin.schedule.index', compact('schedules'));
     }
 
+
+    public function deletePhoto($id)
+    {
+        $schedule = Schedule::findOrFail($id);
+
+        $photo = $schedule->photo;
+        Storage::delete($photo);
+        $schedule->photo = null;
+        $schedule->save();
+
+        return redirect()->back();
+    }
+
     public function create()
     {
         return view('admin.schedule.create');
@@ -26,17 +39,22 @@ class ScheduleController extends Controller
         $this->validate(request(), [
             'title' => 'required',
             'date' => 'required',
-            'organizer' => 'required',
-            'organizer_website' => 'url',
-            'address' => 'required',
+            'photo' => 'mimes:jpeg,jpg,png',
         ]);
+
+        if (request()->file('photo')) {
+            $photo = request()->file('photo')->store('photos');
+        } else {
+            $photo = null;
+        }
 
         $post = Schedule::create([
             'title' => ucfirst(request()->title),
             'date' => request()->date,
             'organizer' => ucfirst(request()->organizer),
             'organizer_website' => request()->organizer_website,
-            'address' => request()->address
+            'address' => request()->address,
+            'photo' => $photo,
         ]);
 
         return redirect('/admin/schedule');
@@ -52,11 +70,14 @@ class ScheduleController extends Controller
         $this->validate(request(), [
             'title' => 'required',
             'date' => 'required',
-            'organizer' => 'required',
-            'organizer_website' => 'url',
-            'address' => 'required',
+            'photo' => 'mimes:jpeg,jpg,png',
         ]);
 
+        if (request()->file('photo')) {
+            $photo = request()->file('photo')->store('schedule_photos');
+        } else {
+            $photo = $schedule->photo;
+        }
 
         $schedule->update([
             'title' => ucfirst(request()->title),
@@ -64,6 +85,7 @@ class ScheduleController extends Controller
             'organizer' => ucfirst(request()->organizer),
             'organizer_website' => request()->organizer_website,
             'address' => request()->address,
+            'photo' => $photo,
         ]);
 
         return redirect('/admin/schedule');
@@ -71,6 +93,10 @@ class ScheduleController extends Controller
 
     public function destroy(Schedule $schedule)
     {
+        if($schedule->photo != null) {
+            Storage::delete($blog->photo);
+        }
+
         $schedule->delete();
 
         return redirect()->route('schedule.index');

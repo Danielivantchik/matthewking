@@ -11,60 +11,23 @@
         <div class="three-fourth">
             <div class="custom-carousel-2">
 
+                @foreach($posts as $post)
                 <div class="item-blog">
                     <div class="inner">
-                        <span class="date">10 November</span>
-                        <a href="#">
-                            <h3>Gods goal for you</h3>
+                        <span class="date">{{ $post->created_at->format("Y-M-d") }}</span>
+                        <a href="/blog/{{ $post->slug }}">
+                            <h3>{{ $post->title }}</h3>
                         </a>
-                        <span class="desc">The Bible says, "Give thanks in everything"  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <span class="desc">
+                            @if($post->description)
+                                {{ str_limit($post->description, 200) }}
+                            @else
+                                {!! str_limit($post->body, 200) !!}
+                            @endif
                         </span>
                     </div>
                 </div>
-
-                <div class="item-blog even">
-                    <div class="inner">
-                        <span class="date">9 November</span>
-                        <a href="#">
-                            <h3>The Bible on Campus</h3>
-                        </a>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </span>
-                    </div>
-                </div>
-
-                <div class="item-blog">
-                    <div class="inner">
-                        <span class="date">8 November</span>
-                        <a href="#">
-                            <h3>A Faithful Witness</h3>
-                        </a>
-                        <span class="desc">Those who are prepared to witness and sensitive to opportunities the Lord opens up will find occasions on every hand to share Christ.
-                        </span>
-                    </div>
-                </div>
-
-                <div class="item-blog even">
-                    <div class="inner">
-                        <span class="date">7 November</span>
-                        <a href="#">
-                            <h3>Transfoming Live</h3>
-                        </a>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </span>
-                    </div>
-                </div>
-
-                <div class="item-blog">
-                    <div class="inner">
-                        <span class="date">6 November</span>
-                        <a href="#">
-                            <h3>Restoring Hope</h3>
-                        </a>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </span>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
         </div>

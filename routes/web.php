@@ -11,9 +11,10 @@ Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function() {
 
     Route::resource('pages', 'Admin\PagesController');
     Route::resource('blog', 'Admin\BlogController');
-    Route::post('/delete-photo/{id}', 'Admin\BlogController@deletePhoto')->name('blog_delete_photo');
+    Route::post('/blog-delete-photo/{id}', 'Admin\BlogController@deletePhoto')->name('blog_delete_photo');
 
     Route::resource('schedule', 'Admin\ScheduleController');
+    Route::post('/schedule-delete-photo/{id}', 'Admin\ScheduleController@deletePhoto')->name('schedule_delete_photo');
 
     Route::get('social', 'Admin\SocialMediaController@index');
     Route::put('social', 'Admin\SocialMediaController@update')->name('social.update');
