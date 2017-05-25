@@ -59,7 +59,7 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            {{-- <li><a href="{{ route('register') }}">Register</a></li> --}}
                         @else
                             <li><a href="/" target="_blank"><i class="fa fa-external-link"></i> Visit Site</a></li>
 

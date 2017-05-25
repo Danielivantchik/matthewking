@@ -25,7 +25,7 @@
             {{-- @include('theme.partials.countdown') --}}
 
 			{{-- Homepage articles (max 3 articles)--}}
-            {{-- @include('theme.partials.homepagearticles') --}}
+            @include('theme.partials.homepagearticles')
 
             {{-- Homepage latest videos (latest 3 videos)--}}
             {{-- @include('theme.partials.latestvideos') --}}

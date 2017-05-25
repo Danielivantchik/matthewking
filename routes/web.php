@@ -5,7 +5,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('/register', function(){
+    return redirect('/login');
+});
 Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'Admin\DashboardController@index');
 
