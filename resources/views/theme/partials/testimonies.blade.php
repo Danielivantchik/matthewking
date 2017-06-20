@@ -5,20 +5,18 @@
                 <div id="testi-carousel" class="testi-slider text-center">
                     <div class="item">
                         {{-- <img src="/theme/img/testi/pic%20(1).jpg" alt="" class="img-circle"> --}}
-                        <blockquote>“Rule with the heart of a servant. Serve with the heart of a king.”</blockquote>
-                        <span class="testi-by">Bill Johnson</span>
+                        <blockquote>“Cling to the cross, then. Put both arms around it! Hold to the Crucified, and never let Him go. Come afresh to the cross at this moment, and rest there now and forever!”</blockquote>
+                        <span class="testi-by">Charles Spurgeon</span>
                     </div>
                     <div class="item">
                         {{-- <img src="/theme/img/testi/pic%20(2).jpg" alt="" class="img-circle"> --}}
-                        <blockquote>“I've read the last page of the Bible, it's all going to turn out all right.”</blockquote>
-                        <span class="testi-by">Billy Graham</span>
+                        <blockquote>“Boldness enables Christians to forsake all rather than Christ, and to prefer to offend all rather than to offend him.”</blockquote>
+                        <span class="testi-by">Jonathan Edwards</span>
                     </div>
                     <div class="item">
                         {{-- <img src="/theme/img/testi/pic%20(3).jpg" alt="" class="img-circle"> --}}
-                        <blockquote>
-                        “When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost.”
-                        </blockquote>
-                        <span class="testi-by">Billy Graham</span>
+                       <blockquote>“I am destined by the Lord to proclaim the message of the death and the blood of Jesus, not with human wisdom, but with divine power, unmindful of personal consequences to myself.”</blockquote>
+                        <span class="testi-by">Count Zinzendorf</span>
                     </div>
 
                 </div>
