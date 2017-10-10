@@ -21,7 +21,7 @@
                         </span>
                     </div>
                     @if($schedule->photo)
-                        <img src="{{ $schedule->photo }}" alt="" width="640" height="480">
+                        <img src="{{ asset($schedule->photo) }}" alt="" width="640" height="480">
                     @else
                         <img src="{{ asset('img/image-na.jpg') }}" alt="">
                     @endif
