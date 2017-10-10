@@ -82,7 +82,7 @@ class PagesController extends Controller
 
     public function schedule()
     {
-        $schedules = Schedule::where('visible', 1)->latest()->get();
+        $schedules = Schedule::where('visible', 1)->get();
 
         return view('theme.schedule', compact('schedules'));
     }
