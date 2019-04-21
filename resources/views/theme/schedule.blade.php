@@ -8,6 +8,19 @@
             width: 562px;
             height: 400px;
         }
+        .card {
+            /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);*/
+            /*transition: 0.3s;*/
+            /*margin:6%;*/
+        }
+
+        .card:hover {
+            /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);*/
+        }
+
+        .card-body {
+            /*padding:8px;*/
+        }
     </style>
 </head>
 
@@ -30,21 +43,36 @@
             <div class="container">
                 <div class="row">
                 @foreach($schedules as $schedule)
+                    {{-- <div class="col-md-6">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top img-responsive" src="http://beta.iopan.co.uk/articles/images/cards/measure.jpg" alt="Measure">
+                            <div class="card-body">
+                                <h4 class="card-title">Measure</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div> --}}
                     <div class="col-md-6 event-item">
-                         @if($schedule->photo)
-                            <img src="/storage/{{ $schedule->photo }}" alt="" class="schedule-image">
-                        @else
-                            <img src="{{ asset('img/image-na.jpg') }}" alt="" class="schedule-image">
-                        @endif
-                        <div class="desc">
-                            <a href="{{ $schedule->organizer_website }}" target="_blank">
-                                <h2>{{ $schedule->title }}</h2>
-                            </a>
-                            <h4>{{  $schedule->date }}</h4>
-                            <h4>{{  $schedule->organizer }}</h4>
-                            <span class="text">
-                                <p>{!! $schedule->address !!}</p>
-                            </span>
+                        <div class="card">
+                             @if($schedule->photo)
+                                {{-- <img src="/storage/{{ $schedule->photo }}" alt="" class="schedule-image"> --}}
+                                <img class="card-img-top img-responsive" src="/storage/{{ $schedule->photo }}" style="width: 100%">
+                            @else
+                                {{-- <img src="{{ asset('img/image-na.jpg') }}" alt="" class="schedule-image"> --}}
+                                <img class="card-img-top img-responsive" src="{{ asset('img/image-na.jpg') }}" style="width: 100%">
+                            @endif
+                            {{-- <div class="desc"> --}}
+                            <div class="card-body desc">
+                                <a href="{{ $schedule->organizer_website }}" target="_blank">
+                                    <h2>{{ $schedule->title }}</h2>
+                                </a>
+                                <h4>{{  $schedule->date }}</h4>
+                                <h4>{{  $schedule->organizer }}</h4>
+                                <span class="text">
+                                    <p>{!! $schedule->address !!}</p>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 @endforeach
