@@ -24,7 +24,11 @@
                 <div class="row">
                 @foreach($schedules as $schedule)
                     <div class="col-md-6 event-item">
-                        <img src="{{ $schedule->photo }}" alt="" style="width: 100%">
+                         @if($schedule->photo)
+                            <img src="/storage/{{ $schedule->photo }}" alt="" style="width: 100%">
+                        @else
+                            <img src="{{ asset('img/image-na.jpg') }}" alt="" style="width: 100%">
+                        @endif
                         <div class="desc">
                             <a href="{{ $schedule->organizer_website }}" target="_blank">
                                 <h2>{{ $schedule->title }}</h2>
