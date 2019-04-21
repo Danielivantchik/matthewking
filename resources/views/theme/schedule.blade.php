@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
     @include('theme.partials.head')
+
+    <style>
+        .schedule-image {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,9 +31,9 @@
                 @foreach($schedules as $schedule)
                     <div class="col-md-6 event-item">
                          @if($schedule->photo)
-                            <img src="/storage/{{ $schedule->photo }}" alt="" style="width: 100%">
+                            <img src="/storage/{{ $schedule->photo }}" alt="" class="schedule-image">
                         @else
-                            <img src="{{ asset('img/image-na.jpg') }}" alt="" style="width: 100%">
+                            <img src="{{ asset('img/image-na.jpg') }}" alt="" class="schedule-image">
                         @endif
                         <div class="desc">
                             <a href="{{ $schedule->organizer_website }}" target="_blank">
