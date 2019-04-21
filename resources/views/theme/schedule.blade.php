@@ -24,6 +24,7 @@
                 <div class="row">
                 @foreach($schedules as $schedule)
                     <div class="col-md-6 event-item">
+                        <img src="{{ $schedule->photo }}" alt="" style="width: 100%">
                         <div class="desc">
                             <a href="{{ $schedule->organizer_website }}" target="_blank">
                                 <h2>{{ $schedule->title }}</h2>
