@@ -27,7 +27,7 @@
                          @if($schedule->photo)
                             <img src="/storage/{{ $schedule->photo }}" alt="" style="width: 100%">
                         @else
-                            <img src="{{ asset('img/image-na.jpg') }}" alt="" width="562.5" height="442">
+                            <img src="{{ asset('img/image-na.jpg') }}" alt="" style="width: 100%">
                         @endif
                         <div class="desc">
                             <a href="{{ $schedule->organizer_website }}" target="_blank">
