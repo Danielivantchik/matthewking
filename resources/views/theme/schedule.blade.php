@@ -5,7 +5,8 @@
 
     <style>
         .schedule-image {
-            width: 100%;
+            width: 562px;
+            height: 400px;
         }
     </style>
 </head>
