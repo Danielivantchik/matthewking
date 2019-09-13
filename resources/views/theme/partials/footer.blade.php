@@ -15,6 +15,9 @@
                     </ul>
                 </nav>
             </div>
+            <div>
+                <img src="{{ asset('images/nga-member.png') }}" alt="NGA Member" width="600px">
+            </div>
         </div>
     </div>
 </footer>
