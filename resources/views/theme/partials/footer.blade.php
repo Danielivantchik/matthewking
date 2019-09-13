@@ -16,7 +16,7 @@
                 </nav>
             </div>
             <div>
-                <img src="{{ asset('images/nga-member.png') }}" alt="NGA Member" width="600px">
+                <img src="{{ asset('images/nga-member.png') }}" alt="NGA Member" width="400px" style="display: block; margin: auto">
             </div>
         </div>
     </div>
