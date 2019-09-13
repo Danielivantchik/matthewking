@@ -22,5 +22,8 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <img src="{{ asset('images/nga-member.png') }}" alt="NGA Member">
+        </div>
     </div>
 </section>

@@ -25,7 +25,7 @@ class PagesController extends Controller
 
     public function blog()
     {
-        if($tag = request()->get('tag')) {
+        if ($tag = request()->get('tag')) {
             $posts = Blog::withAnyTags([$tag])->latest()->paginate();
         } else {
             $posts = Blog::latest()->paginate();
