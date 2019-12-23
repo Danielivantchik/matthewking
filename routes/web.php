@@ -31,8 +31,8 @@ Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function () {
 
 
 Route::get('/', 'PagesController@index');
-Route::get('/blog', 'PagesController@blog');
-Route::get('/blog/{blog}', 'PagesController@blogdetails');
+// Route::get('/blog', 'PagesController@blog');
+// Route::get('/blog/{blog}', 'PagesController@blogdetails');
 
 Route::get('/invite', 'PagesController@invite')->name('invite');
 Route::post('/invite', 'PagesController@storeInvite');
