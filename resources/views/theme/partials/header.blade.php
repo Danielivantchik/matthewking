@@ -7,8 +7,9 @@
                 <div id="logo">
                     <div class="inner">
                         <a href="/">
-                            <div class="logo-1">Matt King</div>
-                            <div class="logo-2">Matt King</div>
+                            <img src="{{ asset('images/logo.png') }}" alt="Matthew King" width="153">
+                            {{-- <div class="logo-1">Matt King</div> --}}
+                            {{-- <div class="logo-2">Matt King</div> --}}
                         </a>
                     </div>
                 </div>
