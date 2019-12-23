@@ -34,7 +34,7 @@
             @include('theme.partials.homepageabout')
 
             {{-- Homepage blog posts --}}
-            @include('theme.partials.homepageblog')
+            {{-- @include('theme.partials.homepageblog') --}}
 
             {{-- Gallery --}}
             {{-- @include('theme.partials.gallery') --}}
