@@ -74,6 +74,11 @@ class PagesController extends Controller
         return view('theme.contact', compact('user'));
     }
 
+    public function preach()
+    {
+        return view('theme.preach');
+    }
+
     public function sendEmail()
     {
         return request()->all();

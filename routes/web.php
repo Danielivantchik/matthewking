@@ -27,6 +27,9 @@ Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function () {
 
     Route::get('contact', 'Admin\ContactController@index');
     Route::put('contact', 'Admin\ContactController@update')->name('contact.update');
+
+    Route::get('preach', 'Admin\PreachController@index');
+//    Route::put('contact', 'Admin\PreachController@update')->name('contact.update');
 });
 
 
@@ -39,5 +42,7 @@ Route::post('/invite', 'PagesController@storeInvite');
 
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::post('/contact', 'PagesController@sendEmail')->name('sendEmail');
+
+Route::get('/preach', 'PagesController@preach')->name('preach');
 
 Route::get('/schedule', 'PagesController@schedule')->name('schedule');
