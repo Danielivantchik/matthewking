@@ -23,7 +23,7 @@
         </section>
         <!-- subheader close -->
 
-        @unless($user->longitude==null or $user->latitude==null)
+        @unless($user->longitude==null ?? $user->latitude==null)
             <div id="map"></div>
         @endunless
         <!-- content begin -->
@@ -98,7 +98,7 @@
         <!-- footer close -->
     </div>
     <script>
-        @unless($user->longitude==null or $user->latitude==null)
+        @unless($user->longitude==null ?? $user->latitude==null)
             var lat="{{$user->latitude}}";
             var lon="{{$user->longitude}}";
         @endunless

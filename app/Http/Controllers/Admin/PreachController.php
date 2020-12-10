@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-//use Spatie\Newsletter\MailChimp\Newsletter;
+use Spatie\Newsletter\MailChimp\Newsletter as Newsletter;
 
 class PreachController extends Controller
 {
@@ -12,10 +12,10 @@ class PreachController extends Controller
         return view('preach.index');
     }
 
-//    public function store(Request $request)
-//    {
+    public function store(Request $request)
+    {
 //        if(!Newsletter::isSubscribed(Request $request)){
 //
 //    }
-//    }
+    }
 }
