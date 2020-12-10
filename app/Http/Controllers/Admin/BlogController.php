@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Blog;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -94,7 +95,7 @@ class BlogController extends Controller
 
         $blog->update([
             'title' => ucfirst(request()->title),
-            'slug' => str_slug(request()->title),
+            'slug' => Str::slug(request()->title),
             'description' => request()->description,
             'body' => request()->body,
             'photo' => $photo,

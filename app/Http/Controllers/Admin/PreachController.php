@@ -9,7 +9,7 @@ class PreachController extends Controller
 {
     public function index()
     {
-        return view('preach.index', compact('preach'));
+        return view('preach.index');
     }
 
 //    public function store(Request $request)

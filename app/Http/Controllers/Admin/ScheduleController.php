@@ -94,7 +94,7 @@ class ScheduleController extends Controller
     public function destroy(Schedule $schedule)
     {
         if($schedule->photo != null) {
-            Storage::delete($blog->photo);
+            Storage::delete($schedule->photo);
         }
 
         $schedule->delete();
