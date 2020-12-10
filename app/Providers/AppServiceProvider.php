@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // TODO: Is nextline needed?
+        //  Paginator::useBootstrapThree();
     }
 
     /**
