@@ -28,7 +28,7 @@
                         {{-- <li><a href="/blog">Blog</a></li> --}}
                         <li><a href="http://resurrectionbelgium.com/" target="_blank">Resurrection Belgium</a></li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a href="/preach">Preach</a></li>
+                        <li><a href="/preach">Preach.</a></li>
                         <li>
                             <a href="#" style="color: rgb(255, 214, 88)">
                                 <u>Donate</u>

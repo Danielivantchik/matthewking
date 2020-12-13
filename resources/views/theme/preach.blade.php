@@ -27,24 +27,37 @@
         <div id="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div id="contact-form-wrapper">
-                            <div class="contact_form_holder">
-{{--                                <form id="contact" class="row" method="POST" action="{{ route('sendEmail') }}">--}}
-{{--                                    {{ csrf_field() }}--}}
-{{--                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your name" />--}}
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="card-body">
+                            @if (session('success'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+                            @if (session('failure'))
+                                <div class="alert alert-danger" role="alert">
+                                    {{ session('failure') }}
+                                </div>
+                            @endif
 
-{{--                                    <input type="text" class="form-control" name="email" id="email" placeholder="Your email" />--}}
+                            <h1>Subscribe to get more information!</h1>
 
-{{--                                    <textarea cols="10" rows="10" name="message" id="message" class="form-control" placeholder="Your message"></textarea>--}}
-
-{{--                                    <button class="btn btn-custom" type="submit">Send</button>--}}
-{{--                                </form>--}}
-                            </div>
+                            <form action="{{url('/newsletter')}}" method="post">
+                                {{csrf_field()}}
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" name="email" type="email" class="form-control"
+                                           placeholder="example@gmail.com"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="form-control" value="Subscribe"/>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <div style="margin-bottom: 400px"></div>
         </div>
         <!-- content close -->
 

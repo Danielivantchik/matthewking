@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Spatie\Newsletter\Newsletter as Newsletter;
+use Newsletter;
 
 class PreachController extends Controller
 {
@@ -14,15 +14,15 @@ class PreachController extends Controller
 
     public function store(Request $request)
     {
-        $newsletter = new \Spatie\Newsletter\Newsletter;
 
-        if(!$newsletter->isSubscribed($request->email)){
-            $newsletter->subscribePending($request->email);
 
-            return redirect('/')->with('succes', 'You have successfully subscribed 
-            for more information about Preach.');
+        if(!Newsletter::isSubscribed($request->email)){
+            Newsletter::subscribePending($request->email);
+
+            return redirect('/preach')->with('success', 'A confirmation email has been send! 
+            Please follow the steps in the email to confirm your subscription.');
         }
 
-        return redirect('/')->with('failure', 'Sorry, you are already subscribed.');
+        return redirect('/preach')->with('failure', 'Whoops, you are already subscribed!');
     }
 }
