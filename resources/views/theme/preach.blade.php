@@ -16,58 +16,48 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <h1>Contact</h1>
+                        <h1>Preach.</h1>
                     </div>
                 </div>
             </div>
         </section>
         <!-- subheader close -->
 
-        @unless($user->longitude==null ?? $user->latitude==null)
-            <div id="map"></div>
-        @endunless
         <!-- content begin -->
         <div id="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div id="contact-form-wrapper">
-                            <div class="contact_form_holder">
-                                <form id="contact" class="row" method="POST" action="{{ route('sendEmail') }}">
-                                    {{ csrf_field() }}
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your name" />
-
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Your email" />
-
-                                    <textarea cols="10" rows="10" name="message" id="message" class="form-control" placeholder="Your message"></textarea>
-
-                                    <button class="btn btn-custom" type="submit">Send</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 text-center">
-                        <div class="contact-info">
-
-                            @if($user->phone != null)
-                                <span class="title">Telephone:</span>
-                                {{$user->phone}}
-						    @endif
-
-                            @if($user->address != null)
-                                <div class="divider-line"></div>
-
-                                <span class="title">Address:</span>
-                                {{ $user->address }}
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="card-body">
+                            @if (session('success'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+                            @if (session('failure'))
+                                <div class="alert alert-danger" role="alert">
+                                    {{ session('failure') }}
+                                </div>
                             @endif
 
+                            <h1>Subscribe to get more information!</h1>
+
+                            <form action="{{url('/newsletter')}}" method="post">
+                                {{csrf_field()}}
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" name="email" type="email" class="form-control"
+                                           placeholder="example@gmail.com"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="form-control" value="Subscribe"/>
+                                </div>
+                            </form>
                         </div>
-
-
                     </div>
                 </div>
             </div>
+            <div style="margin-bottom: 400px"></div>
         </div>
         <!-- content close -->
 
@@ -83,11 +73,9 @@
                     <div class="col-md-6">
                         <nav>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="/home">Home</a></li>
+                                <li><a href="/schedule">Events</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -97,12 +85,6 @@
         </footer>
         <!-- footer close -->
     </div>
-    <script>
-        @unless($user->longitude==null ?? $user->latitude==null)
-            var lat="{{$user->latitude}}";
-            var lon="{{$user->longitude}}";
-        @endunless
-    </script>
     <!-- LOAD JS FILES -->
     <script src="/theme/js/jquery.min.js"></script>
     <script src="/theme/js/bootstrap.min.js"></script>

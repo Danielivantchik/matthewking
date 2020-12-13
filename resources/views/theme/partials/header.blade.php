@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
 
                 <!-- logo begin -->
                 <div id="logo">
@@ -17,7 +17,7 @@
 
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-8">
 
                 <!-- mainmenu begin -->
                 <div id="mainmenu-container">
@@ -28,6 +28,7 @@
                         {{-- <li><a href="/blog">Blog</a></li> --}}
                         <li><a href="http://resurrectionbelgium.com/" target="_blank">Resurrection Belgium</a></li>
                         <li><a href="/contact">Contact</a></li>
+                        <li><a href="/preach">Preach.</a></li>
                         <li>
                             <a href="#" style="color: rgb(255, 214, 88)">
                                 <u>Donate</u>
@@ -40,7 +41,8 @@
                     </ul>
                 </div>
                 <!-- mainmenu close -->
-
+            </div>
+            <div class="col-md-2">
                 <!-- social icons -->
                 <div class="social">
                     @if(\App\User::first()->facebook)

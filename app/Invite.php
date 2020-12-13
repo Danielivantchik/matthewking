@@ -12,6 +12,9 @@ class Invite extends Model
     protected $table = 'invites';
 
     protected $fillable = [
-        'name', 'email', 'phone', 'description'
+        'name',
+        'email',
+        'phone',
+        'description'
     ];
 }
