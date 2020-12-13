@@ -78,7 +78,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        &copy; Copyiright 2020 - Matt King Evangelistic Ministries
+                        &copy; Copyright 2020 - Matt King Evangelistic Ministries
                     </div>
                     <div class="col-md-6">
                         <nav>
