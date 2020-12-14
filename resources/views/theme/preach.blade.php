@@ -49,13 +49,13 @@
                                 BERGEN, NORWAY
                                 <br><br>
 
-                                Gathering of European established evangelists (make bold)<br>
+                                <b>Gathering of European established evangelists</b><br>
                                 Invitation only<br>
                                 April 14-15th<br>
                                 Begin at 12 noon with lunch together<br>
                                 Finish at 9:30pm on Thursday night<br>
                                 <br>
-                                Evangelism conference (make bold)<br>
+                                <b>Evangelism conference</b><br>
                                 Ticketed event- open to all persons<br>
                                 April 16-17th<br>
                                 Begin at 10am on the Friday<br>
