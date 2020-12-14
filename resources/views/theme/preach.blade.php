@@ -66,19 +66,19 @@
                             <form action="{{url('/newsletter')}}" method="post">
                                 {{csrf_field()}}
                                 <div class="form-group">
-                                    <label for="firstname">Firstname</label>
+                                    <label for="firstname">First name</label>
                                     <input id="firstname" name="firstname" type="text" class="form-control is-invalid"
                                            placeholder="Matthew"/>
                                     @if($errors->has('firstname'))
-                                        <small class="form-text invalid-feedback">{{ $errors->first('firstname') }}</small>
+                                        <small class="form-text invalid-feedback">This field is required.</small>
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <label for="lastname">Lastname</label>
+                                    <label for="lastname">Last name</label>
                                     <input id="lastname" name="lastname" type="text" class="form-control is-invalid"
                                            placeholder="King"/>
                                     @if($errors->has('lastname'))
-                                        <small class="form-text invalid-feedback">{{ $errors->first('lastname') }}</small>
+                                        <small class="form-text invalid-feedback">This field is required.</small>
                                     @endif
                                 </div>
                                 <div class="form-group">
@@ -86,7 +86,7 @@
                                     <input id="email" name="email" type="email" class="form-control is-invalid"
                                            placeholder="example@gmail.com"/>
                                     @if($errors->has('email'))
-                                        <small class="form-text invalid-feedback">{{ $errors->first('email') }}</small>
+                                        <small class="form-text invalid-feedback">This field is required.</small>
                                     @endif
                                 </div>
                                 <div class="form-group">
