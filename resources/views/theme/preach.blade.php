@@ -8,6 +8,11 @@
     <div id="wrapper">
         <!-- header begin -->
         @include('theme.partials.header')
+        <style>
+            .invalid-feedback {
+                display: block;
+            }
+        </style>
         <!-- header close -->
 
         <!-- subheader begin -->
@@ -39,15 +44,50 @@
                                     {{ session('failure') }}
                                 </div>
                             @endif
+                                <img src="{{ asset('images/preachLogo.png') }}" alt="Matthew King" width="153">
+                                <br>
+                                BERGEN, NORWAY
+                                <br><br>
 
+                                Gathering of European established evangelists (make bold)<br>
+                                Invitation only<br>
+                                April 14-15th<br>
+                                Begin at 12 noon with lunch together<br>
+                                Finish at 9:30pm on Thursday night<br>
+                                <br>
+                                Evangelism conference (make bold)<br>
+                                Ticketed event- open to all persons<br>
+                                April 16-17th<br>
+                                Begin at 10am on the Friday<br>
+                                Finish at 10pm on the Saturday night<br>
+                                <br><br>
                             <h1>Subscribe to get more information!</h1>
 
                             <form action="{{url('/newsletter')}}" method="post">
                                 {{csrf_field()}}
                                 <div class="form-group">
+                                    <label for="firstname">Firstname</label>
+                                    <input id="firstname" name="firstname" type="text" class="form-control is-invalid"
+                                           placeholder="Matthew"/>
+                                    @if($errors->has('firstname'))
+                                        <small class="form-text invalid-feedback">{{ $errors->first('firstname') }}</small>
+                                    @endif
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">Lastname</label>
+                                    <input id="lastname" name="lastname" type="text" class="form-control is-invalid"
+                                           placeholder="King"/>
+                                    @if($errors->has('lastname'))
+                                        <small class="form-text invalid-feedback">{{ $errors->first('lastname') }}</small>
+                                    @endif
+                                </div>
+                                <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input id="email" name="email" type="email" class="form-control"
+                                    <input id="email" name="email" type="email" class="form-control is-invalid"
                                            placeholder="example@gmail.com"/>
+                                    @if($errors->has('email'))
+                                        <small class="form-text invalid-feedback">{{ $errors->first('email') }}</small>
+                                    @endif
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" class="form-control" value="Subscribe"/>
@@ -57,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            <div style="margin-bottom: 400px"></div>
+            <div style="margin-bottom: 50px"></div>
         </div>
         <!-- content close -->
 
