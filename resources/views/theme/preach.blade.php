@@ -49,15 +49,20 @@
                                 BERGEN, NORWAY
                                 <br><br>
 
+                                <b>Gathering of European evangelists - online</b><br>
+                                Invitation only<br>
+                                April 15th, 2021<br>
+                                Invitations with information will be distributed by email<br>
+                                <br>
                                 <b>Gathering of European established evangelists</b><br>
                                 Invitation only<br>
-                                April 14-15th<br>
+                                Autumn 2021 (exact date to be announced soon)<br>
                                 Begin at 12 noon with lunch together<br>
                                 Finish at 9:30pm on Thursday night<br>
                                 <br>
                                 <b>Evangelism conference</b><br>
                                 Ticketed event- open to all persons<br>
-                                April 16-17th<br>
+                                Autumn 2021 (exact date to be announced soon)<br>
                                 Begin at 10am on the Friday<br>
                                 Finish at 10pm on the Saturday night<br>
                                 <br><br>
